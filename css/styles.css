@@ -1,7 +1,7 @@
 
 
 .carousel-inner {
-margin-top:200px;
+/* margin-top:200px; */
 height: 544px;
 }
 
@@ -67,7 +67,6 @@ transform: translate(-50%, -50%);
 
 #featured .carousel-inner .item {
     width:100%;
-    background-color: #fff;
 }
 
 .features__action--header {
@@ -100,6 +99,10 @@ transform: translate(-50%, -50%);
     color: #ffffff;
   }
   
+  .features__action--text a {
+      color :#fff;
+      text-decoration: underline;
+  }
 
   .features__img--overlay {
     z-index: 1;
@@ -111,4 +114,54 @@ transform: translate(-50%, -50%);
     left: 0px;
     background: rgba(0, 0, 0, 0.1); /*can be anything, of course*/
     background: linear-gradient(90deg, rgba(47, 47, 48, 0.6) 0%, rgba(0,0,0,0) 100%);
+}
+
+@media (max-width: 767px) {
+    .features {
+        height: 1066px;
+    }
+    
+    #featured .carousel-inner .item {
+     background-color: #f5f5f5;
+     height: 766px;
+     /* overflow-y: hidden; */
+    }
+
+    .features__phone {
+        bottom: -30px;
+        top: unset;
+    }
+    .carousel-indicators {
+        bottom:200px;
+    }
+
+    .features__action {
+        top: unset;
+        bottom: -275px;
+        left: 50%;
+        transform: translate(-50%, 0);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 90%;
+    }
+
+    .features__action header, .features__action--text {
+        width:100%;
+        text-align: center;
+    }
+
+    .features__action--text,.features__action--header {
+    color: #000;
+    }
+
+    .features__action--header {
+        width:100%;
+        text-align: center;
+    }
+
+    .features__action--btns {
+        margin-top:10px;
+    }
 }
